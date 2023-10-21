@@ -9,7 +9,7 @@ const openai = new OpenAIApi({ apiKey });
 // Assuming you have a dataset of questions and answers
 const dataset = [
   {
-    question: "What is the history of the FDV?",
+    question: "What is the h`istory of the FDV?",
     answer: "The Flower Corso is the origin of the Harvest Festival. ... (rest of the answer)"
   },
   // Add more questions and answers as needed
