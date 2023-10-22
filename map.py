@@ -46,10 +46,10 @@ texts = text_splitter.split_documents(data)
 
 print (f'Now you have {len(texts)} documents')
 
-embeddings = OpenAIEmbeddings(openai_api_key="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")
+embeddings = OpenAIEmbeddings(openai_api_key="")
 
 pinecone.init(
-    api_key="39c7ae80-bf2d-48fa-b2a5-02c2dde48086",  # find at app.pinecone.io
+        api_key="",  # find at app.pinecone.io
     environment="gcp-starter" # next to api key in console
 )
 index_name = "openaivector"
@@ -59,7 +59,7 @@ docsearch = Pinecone.from_texts(
   [t.page_content for t in texts], embeddings,
   index_name=index_name)
 
-llm = OpenAI(temperature=0, openai_api_key="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")
+llm = OpenAI(temperature=0, openai_api_key="")
 chain = load_qa_chain(llm, chain_type="stuff")
 
 
